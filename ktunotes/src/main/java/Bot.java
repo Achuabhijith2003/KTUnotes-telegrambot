@@ -347,7 +347,7 @@ class keyboardMarkup{
 
 switch (sem) {
     case 1:
-        if (semsub==1) {
+        if (semsub==1) { // s1 subjects CSE
             row = new KeyboardRow();
     row.add("Linear Algebra and Calculus");
     rowList.add(row);
@@ -384,30 +384,210 @@ switch (sem) {
     row = new KeyboardRow();
     row.add("Electrical & Electronics Workshop");
     rowList.add(row);
-        }else if (semsub==2) {
+        }else if (semsub==2) {  //s2 subjects CSE
+            row = new KeyboardRow();
+            row.add("MAT102 VECTOR CALCULUS, DIFFERENTIAL EQUATIONS AND TRANSFORMS");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Physics A");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Physics B");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Chemistry");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Mechanics");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Graphics");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Basics of Civil & Mechanical Engineering");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Basics of Electrical & Electronics Engineering");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Physics Lab");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Chemistry Lab");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Civil & Mechanical Workshop");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Electrical & Electronics Workshop");
+            rowList.add(row);
+        }
+        else if (semsub==3) { //S3 subject in CSE
+            row = new KeyboardRow();
+            row.add("DISCRETE MATHEMATICAL STRUCTURES");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("DATA STRUCTURES");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("OBJECT-ORIENTED PROGRAMMING USING JAVA");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("SUSTAINABLE ENGINEERING");
+            rowList.add(row); 
+            row = new KeyboardRow();
+            row.add("PROFESSIONAL ETHICS");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("DESIGN AND ENGINEERING");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("DATA STRUCTURE LAB");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("OBJECT-ORIENTED PROGRAMMING LAB (IN JAVA)");
+            rowList.add(row);
             
         }
-        else if (semsub==3) {
-            
+        else if (semsub==4) { // s4 subject in CSE
+            row = new KeyboardRow();
+            row.add("GRAPH THEORY");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("COMPUTER ORGANIZATION & ARCHITECTURE");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("DATABASE MANAGEMENT SYSTEMS");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("OPERATING SYSTEM (OS)");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("DESIGN & ENGINEERING");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("PROFESSIONAL ETHICS");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("CONSTITUTION OF INDIA");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("DIGITAL LAB");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("OPERATING SYSTEMS LAB");
+            rowList.add(row);
         }
-        else if (semsub==4) {
-            
+        else if (semsub==5) { //S5  Subject CSE
+            row = new KeyboardRow();
+            row.add("FLAT (Formal Languages and Automata Theory)");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Computer Networks");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("System Software");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Microprocessors and Microcontrollers");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Disaster Management");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Database Management Systems Lab");
+            rowList.add(row);
         }
-        else if (semsub==5) {
-            
-        }
-        else if (semsub==6) {
-            
+        else if (semsub==6) {// S6 subject in CSE
+            row = new KeyboardRow();
+            row.add("Compiler Design");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Computer Graphics And Image Processing");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Algorithm Analysis And Design");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Elective - I");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Industrial Economics And Foreign Trade");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Comprehensive Course Work");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Networking Lab");
+            rowList.add(row);
         }
         else if (semsub==7) {
-            
+            row = new KeyboardRow();
+            row.add("Computer Graphics");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Programming Paradigms");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Computer System Architecture");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Distributed Computing");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Cryptography and Network Security");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Computational Geometry");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Digital Image Processing");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Bio-Informatics");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Machine Learning");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Computational Complexity");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Seminar & Project Preliminary");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Compiler Design Lab");
+            rowList.add(row);
         }
-        else if (semsub==8) {
-            
+        else if (semsub==8) { //s8 Subject in CSE
+            row = new KeyboardRow();
+            row.add("Data Mining and Warehousing");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Embedded Systems");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Fuzzy Set Theory and Applications");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Artificial Intelligence");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Data Science");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Cloud Computing");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Principles of Information Security");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Project");
+            rowList.add(row);
         }
         break;
         case 2:
-        if (semsub==1) {
+        if (semsub==1) { //s1 subjects in AI
             row = new KeyboardRow();
     row.add("Linear Algebra and Calculus");
     rowList.add(row);
@@ -444,8 +624,43 @@ switch (sem) {
     row = new KeyboardRow();
     row.add("Electrical & Electronics Workshop");
     rowList.add(row);
-        }else if (semsub==2) {
-            
+        }else if (semsub==2) {  // s2 subjects in AI
+            row = new KeyboardRow();
+            row.add("MAT102 VECTOR CALCULUS, DIFFERENTIAL EQUATIONS AND TRANSFORMS");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Physics A");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Physics B");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Chemistry");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Mechanics");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Graphics");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Basics of Civil & Mechanical Engineering");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Basics of Electrical & Electronics Engineering");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Physics Lab");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Chemistry Lab");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Civil & Mechanical Workshop");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Electrical & Electronics Workshop");
+            rowList.add(row);
         }
         else if (semsub==3) {
             
@@ -505,7 +720,42 @@ switch (sem) {
     row.add("Electrical & Electronics Workshop");
     rowList.add(row);
         }else if (semsub==2) {
-            
+            row = new KeyboardRow();
+            row.add("MAT102 VECTOR CALCULUS, DIFFERENTIAL EQUATIONS AND TRANSFORMS");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Physics A");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Physics B");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Chemistry");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Mechanics");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Graphics");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Basics of Civil & Mechanical Engineering");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Basics of Electrical & Electronics Engineering");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Physics Lab");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Engineering Chemistry Lab");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Civil & Mechanical Workshop");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Electrical & Electronics Workshop");
+            rowList.add(row);
         }
         else if (semsub==3) {
             
