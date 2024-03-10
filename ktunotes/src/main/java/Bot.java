@@ -6,7 +6,6 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 
 
@@ -28,6 +27,7 @@ public class Bot extends TelegramLongPollingBot {
         return "6947476591:AAGrmnCvegH7AaVU8ZqTZCAo7eccooI6ET0";
     }
     int sem=0;
+    int semsub=0;
      @Override
     public void onUpdateReceived(Update update) {
 
@@ -45,175 +45,183 @@ public class Bot extends TelegramLongPollingBot {
 
         switch (coures) {
             case "/start":
-            sendMessage = setWelcomeMessage(chatId,"");
+            sendMessage = setWelcomeMessage(chatId,"Select the courese");
             sendMessage.setReplyMarkup(keyboard.selecourseskeyboard());
                 System.out.println("start");
                 break;
         case "CSE":
         sem=1;
-       sendMessage = setWelcomeMessage(chatId,"");
+       sendMessage = setWelcomeMessage(chatId,"Select the semester");
         sendMessage.setReplyMarkup(keyboard.selesemkeyboard());
-        System.out.println("CSE");
+        System.out.println("CSE"+sem);
         break;
-        case "AI":
+        case "CSE AI":
         sem=2;
-       sendMessage = setWelcomeMessage(chatId,"");
+       sendMessage = setWelcomeMessage(chatId,"Select the semester");
         sendMessage.setReplyMarkup(keyboard.selesemkeyboard());
-        System.out.println("CSE");
+        System.out.println("Ai"+sem);
         break;
         case "CSE Cyber Security":
         sem=3;
-       sendMessage = setWelcomeMessage(chatId,"");
+       sendMessage = setWelcomeMessage(chatId,"Select the semester");
         sendMessage.setReplyMarkup(keyboard.selesemkeyboard());
-        System.out.println("CSE");
+        System.out.println("CSE Cyber Security"+sem);
         break;
         case "S1":
+        semsub=1;
         System.out.println(sem);
             if (sem==1) {// CSE
             sendMessage = setWelcomeMessage(chatId,"CSE S1");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("CSE S1");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==2) {// CSE AI
             sendMessage = setWelcomeMessage(chatId,"AI S1");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("AI S1");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==3) {// CSE Cybersecurity
             sendMessage = setWelcomeMessage(chatId,"Cyber security S1");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("Cyber security S1");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else{
 
             }
         
         break;
         case "S2":
+        semsub=2;
         System.out.println(sem);
             if (sem==1) {// CSE
                 sendMessage = setWelcomeMessage(chatId,"CSE S2");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("CSE S2");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==2) {// CSE AI
                 sendMessage = setWelcomeMessage(chatId,"AI S2");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("AI S1");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==3) {// CSE Cybersecurity
                 sendMessage = setWelcomeMessage(chatId,"Cyber security S2");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("Cyber security S2");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+               
             }else{
 
             }
         
         break;
         case "S3":
+        semsub=3;
         System.out.println(sem);
             if (sem==1) {// CSE
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("CSE S1");
+                sendMessage = setWelcomeMessage(chatId,"CSE S3");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==2) {// CSE AI
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("AI S1");
+                sendMessage = setWelcomeMessage(chatId,"AI S3");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==3) {// CSE Cybersecurity
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("Cyber security S1");
+                sendMessage = setWelcomeMessage(chatId,"Cyber security S3");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else{
 
             }
         
         break;
         case "S4":
+        semsub=4;
         System.out.println(sem);
             if (sem==1) {// CSE
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("CSE S1");
+                sendMessage = setWelcomeMessage(chatId,"CSE S4");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==2) {// CSE AI
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("AI S1");
+                sendMessage = setWelcomeMessage(chatId,"AI S4");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==3) {// CSE Cybersecurity
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("Cyber security S1");
+                sendMessage = setWelcomeMessage(chatId,"Cyber security S4");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else{
 
             }
         
         break;
         case "S5":
+        semsub=5;
         System.out.println(sem);
             if (sem==1) {// CSE
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("CSE S1");
+                sendMessage = setWelcomeMessage(chatId,"CSE S5");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==2) {// CSE AI
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("AI S1");
+                sendMessage = setWelcomeMessage(chatId,"AI S5");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==3) {// CSE Cybersecurity
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("Cyber security S1");
+                sendMessage = setWelcomeMessage(chatId,"Cyber security S5");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else{
 
             }
         
         break;
         case "S6":
+        semsub=6;
         System.out.println(sem);
             if (sem==1) {// CSE
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("CSE S1");
+                sendMessage = setWelcomeMessage(chatId,"CSE S6");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==2) {// CSE AI
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("AI S1");
+                sendMessage = setWelcomeMessage(chatId,"AI S6");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==3) {// CSE Cybersecurity
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("Cyber security S1");
+                sendMessage = setWelcomeMessage(chatId,"Cyber security S6");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else{
 
             }
         
         break;
         case "S7":
+        semsub=7;
         System.out.println(sem);
             if (sem==1) {// CSE
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("CSE S1");
+                sendMessage = setWelcomeMessage(chatId,"CSE S7");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==2) {// CSE AI
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("AI S1");
+                sendMessage = setWelcomeMessage(chatId,"AI S7");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==3) {// CSE Cybersecurity
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("Cyber security S1");
+                sendMessage = setWelcomeMessage(chatId,"Cyber security S7");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else{
 
             }
         
         break;
         case "S8":
+        semsub=8;
         System.out.println(sem);
             if (sem==1) {// CSE
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("CSE S1");
+                sendMessage = setWelcomeMessage(chatId,"CSE S8");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==2) {// CSE AI
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("AI S1");
+                sendMessage = setWelcomeMessage(chatId,"AI S8");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else if (sem==3) {// CSE Cybersecurity
-                sendMessage = setWelcomeMessage(chatId,"");
-                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard());
-                System.out.println("Cyber security S1");
+                sendMessage = setWelcomeMessage(chatId,"Cyber security S8");
+                sendMessage.setReplyMarkup(keyboard.selesubjectkeyboard(semsub,sem));
+                
             }else{
 
             }
@@ -331,48 +339,198 @@ class keyboardMarkup{
 
    //home selesubjectkeyboard-------------------------------
 
-   public ReplyKeyboardMarkup selesubjectkeyboard(){
+   public ReplyKeyboardMarkup selesubjectkeyboard(int semsub,int sem){
        
     ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
    List<KeyboardRow> rowList = new ArrayList<>();
    KeyboardRow row = new KeyboardRow();
 
-   row = new KeyboardRow();
-   row.add("Linear Algebra and Calculus");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Engineering Physics A");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Engineering Physics B");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Engineering Chemistry");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Engineering Mechanics");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Engineering Graphics");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Basics of Civil & Mechanical Engineering");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Basics of Electrical & Electronics Engineering");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Engineering Physics Lab");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Engineering Chemistry Lab");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Civil & Mechanical Workshop");
-   rowList.add(row);
-   row = new KeyboardRow();
-   row.add("Electrical & Electronics Workshop");
-   rowList.add(row);
+switch (sem) {
+    case 1:
+        if (semsub==1) {
+            row = new KeyboardRow();
+    row.add("Linear Algebra and Calculus");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Physics A");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Physics B");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Chemistry");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Mechanics");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Graphics");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Basics of Civil & Mechanical Engineering");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Basics of Electrical & Electronics Engineering");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Physics Lab");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Chemistry Lab");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Civil & Mechanical Workshop");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Electrical & Electronics Workshop");
+    rowList.add(row);
+        }else if (semsub==2) {
+            
+        }
+        else if (semsub==3) {
+            
+        }
+        else if (semsub==4) {
+            
+        }
+        else if (semsub==5) {
+            
+        }
+        else if (semsub==6) {
+            
+        }
+        else if (semsub==7) {
+            
+        }
+        else if (semsub==8) {
+            
+        }
+        break;
+        case 2:
+        if (semsub==1) {
+            row = new KeyboardRow();
+    row.add("Linear Algebra and Calculus");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Physics A");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Physics B");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Chemistry");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Mechanics");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Graphics");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Basics of Civil & Mechanical Engineering");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Basics of Electrical & Electronics Engineering");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Physics Lab");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Chemistry Lab");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Civil & Mechanical Workshop");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Electrical & Electronics Workshop");
+    rowList.add(row);
+        }else if (semsub==2) {
+            
+        }
+        else if (semsub==3) {
+            
+        }
+        else if (semsub==4) {
+            
+        }
+        else if (semsub==5) {
+            
+        }
+        else if (semsub==6) {
+            
+        }
+        else if (semsub==7) {
+            
+        }
+        else if (semsub==8) {
+            
+        }
+        break;
+        case 3:
+        if (semsub==1) {
+            row = new KeyboardRow();
+    row.add("Linear Algebra and Calculus");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Physics A");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Physics B");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Chemistry");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Mechanics");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Graphics");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Basics of Civil & Mechanical Engineering");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Basics of Electrical & Electronics Engineering");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Physics Lab");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Engineering Chemistry Lab");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Civil & Mechanical Workshop");
+    rowList.add(row);
+    row = new KeyboardRow();
+    row.add("Electrical & Electronics Workshop");
+    rowList.add(row);
+        }else if (semsub==2) {
+            
+        }
+        else if (semsub==3) {
+            
+        }
+        else if (semsub==4) {
+            
+        }
+        else if (semsub==5) {
+            
+        }
+        else if (semsub==6) {
+            
+        }
+        else if (semsub==7) {
+            
+        }
+        else if (semsub==8) {
+            
+        }
+        break;
+
+
+    default:
+        break;
+}
    
    keyboardMarkup.setKeyboard(rowList);
    keyboardMarkup.setResizeKeyboard(true);
