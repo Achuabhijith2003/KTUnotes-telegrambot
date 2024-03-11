@@ -28,6 +28,7 @@ public class Bot extends TelegramLongPollingBot {
     }
     int sem=0;
     int semsub=0;
+    int mod=0;
      @Override
     public void onUpdateReceived(Update update) {
 
@@ -227,6 +228,18 @@ public class Bot extends TelegramLongPollingBot {
             }
         
         break;
+        case "Linear Algebra and Calculus":
+            mod=1;
+        sendMessage = setWelcomeMessage(chatId,"Select the Options");
+                sendMessage.setReplyMarkup(keyboard.selemodkeyboard());
+        
+        break;
+        case "MODULE 1":
+           if (sem==1 && semsub==1) {
+            sendMessage = setWelcomeMessage(chatId,"t.me/bottutobot/abs");
+           }
+        
+        break;
         case "HOME":
         sendMessage.setReplyMarkup(keyboard.selecourseskeyboard());
         System.out.println("back to start");
@@ -263,7 +276,7 @@ public class Bot extends TelegramLongPollingBot {
 
 // {Class}  keyboardMarkup---------------------
 
-class keyboardMarkup{
+class keyboardMarkup {
 
     //home selecourseskeyboard-------------------------------
 
@@ -662,7 +675,7 @@ switch (sem) {
             row.add("Electrical & Electronics Workshop");
             rowList.add(row);
         }
-        else if (semsub==3) {
+        else if (semsub==3) { //s3 subject in AI
             
         }
         else if (semsub==4) {
@@ -790,6 +803,44 @@ switch (sem) {
 }
 
 //end home selesubjectkeyboard-------------------------------
+
+public ReplyKeyboardMarkup selemodkeyboard(){
+
+    ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+    List<KeyboardRow> rowList = new ArrayList<>();
+    KeyboardRow row = new KeyboardRow();
+    
+
+    row = new KeyboardRow();
+            row.add("MODULE 1");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("MODULE 2");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("MODULE 3");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("MODULE 4");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("MODULE 5");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Syllabus");
+            rowList.add(row);
+            row = new KeyboardRow();
+            row.add("Previous  Year Papers");
+            rowList.add(row);
+
+
+
+    keyboardMarkup.setKeyboard(rowList);
+    keyboardMarkup.setResizeKeyboard(true);
+ 
+    return keyboardMarkup;
+
+}
 
 }
 // end {Class}  keyboardMarkup---------------------
